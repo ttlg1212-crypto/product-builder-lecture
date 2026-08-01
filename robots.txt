@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ttlg1212-crypto.github.io/product-builder-lecture/sitemap.xml
