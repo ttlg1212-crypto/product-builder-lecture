@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>동물상 테스트 — 오늘의 번호</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="animal-test.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="index.html"><span class="brand-dot"></span>오늘의 번호</a>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <p class="eyebrow">AI Face Test</p>
+    <h1>나는 <span>강아지상</span>일까<br><span>고양이상</span>일까?</h1>
+    <p class="sub">얼굴 사진을 올리면 AI가 강아지상인지 고양이상인지 분석해드려요. 업로드한 사진은 브라우저에서만 분석되고 서버로 전송되지 않아요.</p>
+  </div>
+
+  <div class="stage">
+    <div class="upload-area" id="dropzone">
+      <input type="file" id="fileInput" accept="image/*" hidden>
+      <div class="upload-prompt" id="uploadPrompt">
+        <div class="upload-icon">📷</div>
+        <div class="upload-text">클릭하거나 사진을 끌어다 놓으세요</div>
+        <div class="upload-hint">얼굴이 또렷하게 나온 정면 사진일수록 정확해요</div>
+      </div>
+      <img class="preview-img hidden" id="previewImg" alt="업로드한 사진 미리보기">
+    </div>
+
+    <div class="controls hidden" id="actionRow" style="margin-top:20px;">
+      <button class="btn-primary" id="analyzeBtn">동물상 분석하기</button>
+      <button class="btn-ghost" id="resetBtn">다시 선택</button>
+    </div>
+
+    <div class="result hidden" id="resultPanel">
+      <div class="verdict-emoji" id="verdictEmoji">🐶</div>
+      <div class="verdict-text" id="verdictText">당신은 <b id="verdictType">강아지상</b>이네요!</div>
+      <div class="verdict-desc" id="verdictDesc"></div>
+
+      <div class="bars" id="barsContainer"></div>
+
+      <button class="btn-ghost" id="retryBtn" style="margin-top:20px; width:100%;">다른 사진으로 다시하기</button>
+    </div>
+  </div>
+
+  <footer>
+    AI 분석 결과는 재미로만 봐주세요 🐾<br>
+    <a href="index.html" class="footer-link">오늘의 번호</a> · <a href="partner.html" class="footer-link">제휴 문의</a>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script src="animal-test.js"></script>
+</body>
+</html>
