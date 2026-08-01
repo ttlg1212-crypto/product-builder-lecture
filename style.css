@@ -57,6 +57,7 @@ header{
   letter-spacing: 0.02em;
   font-size: 15px;
   color: var(--ink-dim);
+  text-decoration: none;
 }
 .brand-dot{
   width:8px;height:8px;border-radius:50%;
@@ -387,6 +388,12 @@ footer{
   font-size: 12px;
   line-height:1.7;
 }
+.footer-link{
+  color: var(--ink-dim);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-link:hover{ color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce){
   .ball, .ball.rolling{ animation: none !important; transition: none !important; }

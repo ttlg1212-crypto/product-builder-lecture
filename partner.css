@@ -1,0 +1,47 @@
+.field{
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field label{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-dim);
+}
+.field input,
+.field textarea{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  color: var(--ink);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px 14px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s ease;
+}
+.field input:focus,
+.field textarea:focus{
+  border-color: var(--ball-2);
+}
+.field input::placeholder,
+.field textarea::placeholder{
+  color: var(--ink-dim);
+}
+
+#partnerForm .btn-primary{
+  width: 100%;
+  margin-top: 4px;
+}
+
+.form-msg{
+  margin: 14px 0 0;
+  font-size: 13px;
+  min-height: 18px;
+  text-align: center;
+}
+.form-msg.success{ color: var(--ball-5); }
+.form-msg.error{ color: var(--ball-3); }

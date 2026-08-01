@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제휴 문의 — 오늘의 번호</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="partner.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="index.html"><span class="brand-dot"></span>오늘의 번호</a>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">🌙</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <p class="eyebrow">Partnership</p>
+    <h1>제휴 <span>문의</span>하기</h1>
+    <p class="sub">협업, 광고, 제휴 제안이 있으신가요? 아래 양식을 작성해 주시면 빠르게 답변드릴게요.</p>
+  </div>
+
+  <div class="stage">
+    <form id="partnerForm" action="https://formspree.io/f/mwvgdqpw" method="POST">
+      <div class="field">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="홍길동" required>
+      </div>
+
+      <div class="field">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+      </div>
+
+      <div class="field">
+        <label for="company">회사 / 서비스명</label>
+        <input type="text" id="company" name="company" placeholder="(선택) 소속을 알려주세요">
+      </div>
+
+      <div class="field">
+        <label for="message">문의 내용</label>
+        <textarea id="message" name="message" rows="5" placeholder="제안하고 싶은 내용을 자유롭게 적어주세요." required></textarea>
+      </div>
+
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <button class="btn-primary" type="submit" id="submitBtn">문의 보내기</button>
+
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </form>
+  </div>
+
+  <footer>
+    보내주신 내용은 확인 후 이메일로 회신드립니다.
+  </footer>
+
+</div>
+
+<script src="partner.js"></script>
+</body>
+</html>
