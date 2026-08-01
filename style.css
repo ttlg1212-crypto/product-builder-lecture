@@ -13,6 +13,15 @@
   --ball-5: #B0D840; /* 41-45 초록 */
 }
 
+:root[data-theme="light"]{
+  --bg: #F5F7FB;
+  --bg-soft: #FFFFFF;
+  --panel: #FFFFFF;
+  --line: rgba(20,26,45,0.09);
+  --ink: #1B2436;
+  --ink-dim: #6B7690;
+}
+
 *{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; }
 body{
@@ -24,6 +33,7 @@ body{
   font-family: 'Noto Sans KR', sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .wrap{
@@ -53,6 +63,11 @@ header{
   background: var(--ball-2);
   box-shadow: 0 0 12px var(--ball-2);
 }
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 .date-tag{
   font-family:'Space Grotesk', sans-serif;
   font-size:13px;
@@ -61,6 +76,21 @@ header{
   padding: 6px 12px;
   border-radius: 100px;
 }
+.theme-toggle{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 0;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.theme-toggle:hover{ border-color: rgba(240,244,255,0.25); transform: translateY(-1px); }
 
 .hero{
   margin-bottom: 40px;
